@@ -7,7 +7,7 @@ import com.example.wavesoffood.databinding.CartItemBinding
 
 class CardAdapter(private val cartItems: MutableList<String>, private val cartItemPrices: MutableList<String>, private val cartImages: MutableList<Int>): RecyclerView.Adapter<CardAdapter.CartViewHolder>() {
 
-    private val itemQuantities = IntArray(cartItems.size){1}
+    private val itemQuantities = MutableList(cartItems.size) { 1 }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val binding = CartItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return CartViewHolder(binding)
@@ -31,10 +31,16 @@ class CardAdapter(private val cartItems: MutableList<String>, private val cartIt
                 cartQuantity.text = quantity.toString()
 
                 minusButton.setOnClickListener {
-                    decreaseQuantity(position)
+                    val currentPosition = adapterPosition
+                    if (currentPosition != RecyclerView.NO_POSITION) {
+                        decreaseQuantity(currentPosition)
+                    }
                 }
                 plusButton.setOnClickListener {
-                    increaseQuantity(position)
+                    val currentPosition = adapterPosition
+                    if (currentPosition != RecyclerView.NO_POSITION) {
+                        increaseQuantity(currentPosition)
+                    }
                 }
                 deleteButton.setOnClickListener {
                     val itemPosition = adapterPosition
@@ -60,6 +66,7 @@ class CardAdapter(private val cartItems: MutableList<String>, private val cartIt
             cartItems.removeAt(position)
             cartImages.removeAt(position)
             cartItemPrices.removeAt(position)
+            itemQuantities.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, cartItems.size)
         }

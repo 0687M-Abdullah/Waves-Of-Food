@@ -3,8 +3,6 @@ package com.example.wavesoffood
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.wavesoffood.databinding.ActivityMainBinding
@@ -24,5 +22,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         binding.bottomNavigationView.setupWithNavController(navController)
+        binding.notificationIcon.setOnClickListener {
+            val notificationBottom = NotificationBottom()
+            notificationBottom.show(supportFragmentManager, "Test")
+        }
     }
 }

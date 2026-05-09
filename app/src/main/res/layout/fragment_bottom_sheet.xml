@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".Fragment.BottomSheetFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,6 +16,7 @@
         android:layout_marginTop="8dp"
         android:textSize="24sp"
         android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/textColor"
         android:text="Menu" />
 
     <androidx.recyclerview.widget.RecyclerView

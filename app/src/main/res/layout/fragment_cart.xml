@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".Fragment.CartFragment">
 
     <TextView
@@ -15,6 +16,7 @@
         android:fontFamily="@font/yeonsung_regular"
         android:textSize="24dp"
         android:text="Cart"
+        android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

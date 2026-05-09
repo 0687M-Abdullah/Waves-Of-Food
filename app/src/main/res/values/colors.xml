@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash1">#c21a1a</color>
     <color name="splash2">#c83a4d</color>
+    <color name="textColor">#FF000000</color>
+    <color name="backgroundColor">#FFFFFFFF</color>
+    <color name="editTextColor">#000000</color>
+    <color name="editTextBackground">#FFFFFF</color>
+    <color name="editTextStroke">#f4f4f4</color>
+    <color name="cardBackgroundColor">#FFFFFF</color>
 </resources>
