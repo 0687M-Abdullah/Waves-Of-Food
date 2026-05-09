@@ -9,7 +9,8 @@
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     app:cardCornerRadius="15dp"
-    app:cardElevation="5dp">
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/card_bg_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Customer Name"
-            android:textColor="@color/black"
+            android:textColor="@color/text_color"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Payment"
-            android:textColor="#CFCFCF"
+            android:textColor="@color/secondary_text_color"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/customerName"
             app:layout_constraintTop_toBottomOf="@+id/customerName" />
@@ -52,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delivered"
-            android:textColor="@color/black"
+            android:textColor="@color/text_color"
             android:textSize="16sp"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/deliveryStatusColor"

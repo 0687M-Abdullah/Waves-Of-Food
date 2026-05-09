@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#FFFFFF</color>
+    <color name="bg_color">#121212</color>
+    <color name="card_bg_color">#2D2D2D</color>
+
+    <!-- Redefining brand colors for dark mode to be more readable -->
+    <color name="splash1">#ff5f52</color>
+    <color name="splash2">#ff7961</color>
+    <color name="secondary_text_color">#999999</color>
+</resources>

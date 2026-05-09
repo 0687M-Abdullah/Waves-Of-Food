@@ -4,4 +4,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash1">#c21a1a</color>
     <color name="splash2">#c83a4d</color>
+
+    <color name="brand_color">#c21a1a</color>
+    <color name="brand_color_secondary">#c83a4d</color>
+
+    <!-- Semantic Colors -->
+    <color name="text_color">#000000</color>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="card_bg_color">#F7C8CC</color>
+    <color name="secondary_text_color">#CFCFCF</color>
 </resources>

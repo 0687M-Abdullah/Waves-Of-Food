@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bg_color"
     tools:context=".AddMenuItem">
 
     <ImageButton
@@ -16,6 +16,7 @@
         android:layout_marginTop="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/back_black"
+        app:tint="@color/text_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:text="Item Image"
                     android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginStart="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +91,7 @@
                     android:layout_height="30dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/blackplus"
+                    app:tint="@color/text_color"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -124,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad"
-                android:textColor="@color/black"
+                android:textColor="@color/text_color"
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="8dp"/>
 
@@ -142,7 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="• Noddle\n• Salad\n• Burger\n• Herbal Pan Cake\n• Momos"
-                android:textColor="@color/black"
+                android:textColor="@color/text_color"
                 android:lineSpacingExtra="4dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"/>

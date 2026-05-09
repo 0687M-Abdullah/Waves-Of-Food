@@ -14,7 +14,8 @@ import com.google.firebase.database.*
 class AllMenuItems : AppCompatActivity() {
 
     private lateinit var database: FirebaseDatabase
-    private val menuItems: MutableList<AllMenu> = mutableListOf()
+    private var menuItems: MutableList<AllMenu> = mutableListOf()
+    private lateinit var adapter: MenuItemAdapter
 
     private val binding: ActivityAllMenuItemsBinding by lazy {
         ActivityAllMenuItemsBinding.inflate(layoutInflater)
@@ -29,6 +30,7 @@ class AllMenuItems : AppCompatActivity() {
             "https://wavesoffood-f7b61-default-rtdb.firebaseio.com/"
         )
 
+        setAdapter()
         retrieveMenuItem()
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
@@ -62,7 +64,7 @@ class AllMenuItems : AppCompatActivity() {
                     }
                 }
 
-                setAdapter()
+                adapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -77,7 +79,7 @@ class AllMenuItems : AppCompatActivity() {
 
     private fun setAdapter() {
 
-        val adapter = MenuItemAdapter(
+        adapter = MenuItemAdapter(
             this@AllMenuItems,
             menuItems,
             { position -> deleteMenuItem(position) },
